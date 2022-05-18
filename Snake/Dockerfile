@@ -1,5 +1,6 @@
 FROM openjdk:8
-COPY ./src/SnakeGame.java /tmp
+EXPOSE 8080
+COPY Snake/src/SnakeGame.java /tmp
 WORKDIR /tmp
 RUN ["javac","SnakeGame.java"]
 ENTRYPOINT ["java","SnakeGame"]
